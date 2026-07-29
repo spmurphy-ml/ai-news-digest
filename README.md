@@ -4,6 +4,7 @@ A [LangGraph](https://langchain-ai.github.io/langgraph/) workflow that pulls
 recent AI news from multiple RSS sources, summarizes each item, classifies it,
 and writes a dated markdown digest.
 
+**Part of a larger portfolio:** [ai-ml-portfolio](https://github.com/spmurphy-ml/ai-ml-portfolio) — production AI/ML work at enterprise scale.
 Built as a working example of a multi-node agentic pipeline — state management,
 node composition, and graceful degradation when an upstream source fails.
 
