@@ -217,11 +217,13 @@ def render(state: DigestState) -> dict:
         lines.append("")
 
     digest = "\n".join(lines)
-    filename = f"digest-{today}.md"
-    with open(filename, "w", encoding="utf-8") as fh:
+    output_dir = "news"
+    os.makedirs(output_dir, exist_ok=True)
+    filepath = os.path.join(output_dir, f"digest-{today}.md")
+    with open(filepath, "w", encoding="utf-8") as fh:
         fh.write(digest)
 
-    print(f"[render]     wrote {filename}")
+    print(f"[render]     wrote {filepath}")
     return {"digest": digest}
 
 
